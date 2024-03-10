@@ -70,7 +70,7 @@ def jupyter_translate(fname, language='pt', rename_source_file=False, print_tran
     TODO:
     add dest_path: Destination folder in order to save the translated files.
     """
-    data_translated = json.load(open(fname, 'r'))
+    data_translated = json.load(open(fname, 'r', encoding='utf-8'))
 
     skip_row=False
     for i, cell in enumerate(data_translated['cells']):
